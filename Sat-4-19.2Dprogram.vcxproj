@@ -159,7 +159,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Title.h" />
     <ClInclude Include="InGame.h" />
-    <ClInclude Include="ヘッダー.h" />
+    <ClInclude Include="FloatXY.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
