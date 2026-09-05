@@ -1,19 +1,12 @@
 #pragma once
-#pragma once
-#include "SceneBase.h"
-
-#include "KeyReader.h"		// キーリーダー
+#include "Scene.h"
 
 
-class SceneTitle : public SceneBase
+class Title : public Scene
 {
 	/// <summary>
 	/// インスタンスはここで宣言しメンバ変数にする
 	/// </summary>
-
-	// キーリーダーのインスタンスを生成
-	KeyReader key_state;
-
 
 
 public:
@@ -21,14 +14,14 @@ public:
 	/// <summary>
 	/// デフォルトコンストラクター
 	/// </summary>
-	SceneTitle() {}
+	Title() {}
 
 	/// <summary>
 	/// コンストラクター
 	/// ゲームへのポインター
 	/// </summary>
 	/// <param name="arg_ptr"></param>
-	SceneTitle(Game* arg_ptr) {
+	Title(Game* arg_ptr) {
 
 		this->oya_ptr = arg_ptr;
 

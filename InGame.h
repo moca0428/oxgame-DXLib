@@ -1,12 +1,9 @@
 #pragma once
-
-#include "SceneBase.h"
-
-#include "KeyReader.h"		// キーリーダー
+#include "Scene.h"
 
 
 
-class Scene_Test : public SceneBase
+class InGame : public Scene
 {
 
 private:
@@ -18,13 +15,13 @@ public:
 	/// <summary>
 	/// デフォルトコンストラクター
 	/// </summary>
-	Scene_Test() {}
+	InGame() {}
 
 	/// <summary>
 	/// コンストラクター
 	/// </summary>
 	/// <param name="arg_ptr"></param>
-	Scene_Test(Game* arg_ptr) {
+	InGame(Game* arg_ptr) {
 
 		this->oya_ptr = arg_ptr;
 

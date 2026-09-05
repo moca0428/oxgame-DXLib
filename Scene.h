@@ -1,10 +1,8 @@
 #pragma once
 
-#include "KeyReader.h"		// キーリーダー
-
 class Game;
 
-class SceneBase
+class Scene
 {
 
 protected:
@@ -16,13 +14,9 @@ protected:
 	/// インスタンスはここで宣言しメンバ変数にする
 	/// </summary>
 
-	// キーリーダーのインスタンスを生成
-	KeyReader key_state;
-
 
 
 public:
-
 
 
 
