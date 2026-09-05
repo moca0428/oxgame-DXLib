@@ -135,15 +135,23 @@
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="SceneTitle.cpp" />
-    <ClCompile Include="Scene_Test.cpp" />
+    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="InGame.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Board.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="KeyReader.h" />
-    <ClInclude Include="SceneBase.h" />
-    <ClInclude Include="SceneTitle.h" />
-    <ClInclude Include="Scene_Test.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Piece.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Result.h" />
+    <ClInclude Include="RPS.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Title.h" />
+    <ClInclude Include="InGame.h" />
+    <ClInclude Include="ヘッダー.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
