@@ -1,10 +1,5 @@
 #include "Mouse.h"
 
-Mouse::Mouse()
-{
-	
-}
-
 int Mouse::mouse_x()
 {
 	int mouse_x;
