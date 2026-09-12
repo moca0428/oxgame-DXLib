@@ -1,7 +1,24 @@
 #include "Game.h"
 
+//	シーン切り替え
+void Game::ChangeScene(Scenenum scene_arg)
+{
+
+}
+
+
 void Game::GameLoop()
 {
+
+	this->ChangeScene(INGAME);
+
+
+	//
+	//	初期化処理
+	//
+	current_scene_ptr->Init();
+
+
 	// ループ開始
 	while (ProcessMessage() == 0)
 	{
@@ -16,9 +33,27 @@ void Game::GameLoop()
 
 
 		//
-		//	ここにゲームの処理を記述する
+		//	入力処理
+		//
+		current_scene_ptr->Input();
+
+
+		//
+		//	更新処理
 		//
 
+		current_scene_ptr->Update();
+
+		//
+		//	描画処理
+		//
+
+		current_scene_ptr->Draw();
+
+		//
+		//	音声再生処理
+		//
+		current_scene_ptr->Soundplay();
 
 
 
