@@ -21,5 +21,8 @@ public:
 	//	マウスの座標を取得する
 	void GetMouse();
 
+	//	マウスの左ボタン押下状況を取得する
+	bool GetMouseLeft();
+
 
 };

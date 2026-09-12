@@ -22,3 +22,8 @@ int Mouse::mouse_y()
 	 this->mouse_pos.x = mouse_x();
 	 this->mouse_pos.y = mouse_y();
 }
+
+ bool Mouse::GetMouseLeft()
+ {
+	 return (GetMouseInput() & MOUSE_INPUT_LEFT) != 0;
+ }
