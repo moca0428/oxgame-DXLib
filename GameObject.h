@@ -8,8 +8,6 @@ public:
 
 	// コンストラクタ
 	GameObject();
-	// デストラクタ
-	virtual ~GameObject();
 
 	// 座標を設定する
 	void SetPosition(float x, float y);

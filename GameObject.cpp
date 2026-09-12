@@ -4,8 +4,8 @@
 GameObject::GameObject()
 {
 
-	x = 0.0f;
-	y = 0.0f;
+	this->position.x = 0.0f;
+	this->position.y = 0.0f;
 	width = 0.0f;
 	height = 0.0f;
 
@@ -13,16 +13,16 @@ GameObject::GameObject()
 // À•W‚ÌÝ’è
 void GameObject::SetPosition(float x, float y)
 {
-	this->x = x;
-	this->y = y;
+	this->position.x = x;
+	this->position.y = y;
 }
 //À•W‚ÌŽæ“¾
 
 float GameObject::GetX() const
 {
-	return x;
+	return this->position.x;
 }
 float GameObject::GetY() const
 {
-	return y;
+	return this->position.y;
 }
