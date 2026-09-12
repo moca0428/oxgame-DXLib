@@ -1,6 +1,8 @@
 //　ボード.cpp（処理の部分を書く）
 #include"Board.h";
 
+//	プル＋リクエストをする。
+
 
 //----------------------------------
 //  初期化処理
@@ -23,8 +25,8 @@ void Board::Update() {
 void Board::Render() {
 
 	//	盤の描画
-	DrawLine(Line_x,0, Line_x+160,0,GetColor(255,255,255));		//	X軸の線
-	DrawLine(Line_y, 0, 0, Line_y+160, GetColor(255, 255, 255));	//	Y軸の線
+	DrawLine(Line_x,0, Line_x+160,0,GetColor(0,255,255));		//	X軸の線
+	DrawLine(Line_y, 0, 0, Line_y+160, GetColor(0, 255, 255));	//	Y軸の線
 
 
 }
