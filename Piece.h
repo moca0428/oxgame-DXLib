@@ -1,6 +1,6 @@
 #pragma once
 #include "FloatXY.h"
-#include "DXLib.h"
+
 
 class Piece {
 
@@ -10,15 +10,20 @@ public:
 	// コンストラクタ
 	Piece();
 
-	//	画像用のグラフィックハンドル（〇）
-	int ohnd = LoadGraph("data/o.png");
-	//	画像用のグラフィックハンドル（×）
-	int xhnd = LoadGraph("data/x.png");
 
+
+	//	画像用のグラフィックハンドル（〇）
+	int ohnd = -1;
+	//	画像用のグラフィックハンドル（×）
+	int xhnd = -1;
 
 	// 座標
 
 	FloatXY pos; // 座標をFloatXY型で保持
+
+	//　駒の初期化処理
+	void Init();
+
 
 	//	マウスに合わせて移動
 	void MoveToMouse(FloatXY mouse);

@@ -1,6 +1,8 @@
 #pragma once
 #include "Scene.h"
+
 #include "Board.h"
+#include "Piece.h"
 
 
 class InGame : public Scene
@@ -33,6 +35,10 @@ public:
 
 	//	ボードのインスタンス
 	Board board;
+
+	//	駒のインスタンス
+	Piece piece;
+
 
 	//	オーバーライドで定義
 

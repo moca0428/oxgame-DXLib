@@ -1,5 +1,6 @@
 #include "GameObject.h"
 
+
 // コンストラクタ
 GameObject::GameObject()
 {

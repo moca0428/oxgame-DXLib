@@ -42,6 +42,9 @@ void InGame::Draw()
 	//	ボードの描画
 	this->board.Render();
 
+
+
+
 	//	マウスの描画
 	this->Mouse.DrawMouse();
 

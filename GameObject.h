@@ -1,6 +1,7 @@
 #pragma once
 #include "FloatXY.h"
 
+
 class GameObject {
 
 
@@ -28,3 +29,4 @@ protected:
 	// çÇÇ≥
 	float height;
 };
+
