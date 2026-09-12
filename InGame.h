@@ -1,9 +1,6 @@
 #pragma once
 #include "Scene.h"
-#include "DxLib.h"
 
-//　マウス
-#include "Mouse.h"
 
 
 
@@ -11,10 +8,6 @@ class InGame : public Scene
 {
 
 private:
-
-	//	呼び出し元へのポインター
-	Game* oya_ptr = nullptr;
-
 
 
 	//	マウス

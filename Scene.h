@@ -1,5 +1,10 @@
 #pragma once
 
+#include "DxLib.h"
+
+//　マウス
+#include "Mouse.h"
+
 class Game;
 
 class Scene
