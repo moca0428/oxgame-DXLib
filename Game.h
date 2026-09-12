@@ -36,8 +36,11 @@ public:
     // シーンのポインター
 	Scene* scene_ptr = nullptr;	
 
-	
-
+	/// <summary>
+	/// シーン切り替え
+	/// </summary>
+	/// <param name="scene_arg">切り替えるシーンの番号</param>
+	void ChangeScene(Scenenum scene_arg);
 
 	/// <summary>
 	/// ゲームループ
