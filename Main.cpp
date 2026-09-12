@@ -5,8 +5,8 @@
 #include "Game.h"
 
 //	定数の宣言
-#define WINDOW_W 1280	// 画面サイズ　横
-#define WINDOW_H 720	// 画面サイズ　縦
+#define WINDOW_W 1920	// 画面サイズ　横
+#define WINDOW_H 1080	// 画面サイズ　縦
 
 // ------------------------------
 // WinMain

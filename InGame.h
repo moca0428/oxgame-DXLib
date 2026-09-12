@@ -1,13 +1,13 @@
 #pragma once
 #include "Scene.h"
-
-
+#include "Board.h"
 
 
 class InGame : public Scene
 {
 
 private:
+
 
 
 
@@ -30,6 +30,9 @@ public:
 
 	}
 
+
+	//	ボードのインスタンス
+	Board board;
 
 	//	オーバーライドで定義
 

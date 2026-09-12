@@ -23,9 +23,10 @@ void Board::Update() {
 void Board::Render() {
 
 	//	”Õ‚Ì•`‰æ
-	DrawLine(Line_x,0, Line_x+160,0,GetColor(255,255,255));		//	X²‚Ìü
-	DrawLine(Line_y, 0, 0, Line_y+160, GetColor(255, 255, 255));	//	Y²‚Ìü
+//	DrawLine(Line_x,0, Line_x+160,0,GetColor(255,255,255));		//	X²‚Ìü
+//	DrawLine(Line_y, 0, 0, Line_y+160, GetColor(255, 255, 255));	//	Y²‚Ìü
 
+	DrawGraph(560, 150, board_hnd, FALSE);	//	”Õ–Ê‚Ì•`‰æ
 
 }
 //----------------------------------
