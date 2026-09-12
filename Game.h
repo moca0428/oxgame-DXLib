@@ -2,11 +2,15 @@
 
 #include <ctime>			// 標準C ライブラリ ヘッダー <time.h> をインクルードし、関連する名前を std 名前空間に追加します。
 #include "DxLib.h"			// DxLib
+#include "Scene.h"			// Sceneクラス
+
+class Scene;
 
 class Game
 {
 
 public:
+
 
 	/// <summary>
 	/// デフォルトコンストラクター
@@ -15,6 +19,25 @@ public:
 	/// <summary>
 	/// コンストラクター
 	/// </summary>
+	
+	enum Scenenum
+	{
+
+		// ゲームの状態
+		// タイトル画面
+		TITLE,
+		// ゲーム中
+		INGAME,
+		// 結果画面
+		RESULT,
+
+	};
+
+    // シーンのポインター
+	Scene* scene_ptr = nullptr;	
+
+	
+
 
 	/// <summary>
 	/// ゲームループ
