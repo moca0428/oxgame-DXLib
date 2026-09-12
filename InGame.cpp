@@ -23,7 +23,7 @@ void InGame::Update()
 	//	マウス座標の取得
 	this->Mouse.GetMouse();
 
-	//	マウスの左クリックがされていたら
+	//	マウスの左クリックがおされていたら
 	if(this->Mouse.GetMouseLeft())
 	{
 		
