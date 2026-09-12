@@ -3,8 +3,9 @@
 
 //　ボードクラス
 
-class bord{
+class Board{
 
+public:
 	//	変数の宣言
 
 	//	線のXY座標を入れる変数
@@ -15,6 +16,8 @@ class bord{
 
 
 	//	関数の宣言
-
-
+	void Init();
+	void Update();
+	void Render();
+	void Exit();
 };
