@@ -1,4 +1,5 @@
 #pragma once
+#include "FloatXY.h"
 
 class GameObject {
 
@@ -9,6 +10,7 @@ public:
 	GameObject();
 	// デストラクタ
 	virtual ~GameObject();
+
 	// 座標を設定する
 	void SetPosition(float x, float y);
 
@@ -20,10 +22,8 @@ public:
 protected:
 
 	// 座標
-	// X座標
-	float x;
-	// Y座標
-	float y; 
+
+	FloatXY position; // 座標をFloatXY型で保持
 
 	// 幅
 	float width;

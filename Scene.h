@@ -14,6 +14,8 @@ protected:
 
 	//	呼び出し元へのポインター
 	Game* oya_ptr = nullptr;
+	//	マウス
+	Mouse Mouse;
 
 	/// <summary>
 	/// インスタンスはここで宣言しメンバ変数にする

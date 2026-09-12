@@ -10,8 +10,6 @@ class InGame : public Scene
 private:
 
 
-	//	É}ÉEÉX
-	Mouse Mouse;
 
 
 

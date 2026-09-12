@@ -19,6 +19,8 @@ void Title::Input()
 //	更新処理
 void Title::Update()
 {
+	//	マウス座標の取得
+	this->Mouse.GetMouse();
 
 
 

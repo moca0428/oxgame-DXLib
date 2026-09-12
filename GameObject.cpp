@@ -1,5 +1,5 @@
 #include "GameObject.h"
-/*
+
 // コンストラクタ
 GameObject::GameObject()
 {
@@ -26,4 +26,3 @@ float GameObject::GetY() const
 {
 	return y;
 }
-*/
