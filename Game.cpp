@@ -13,20 +13,20 @@ void Game::ChangeScene(Scenenum scene_arg)
 	switch (scene_arg)
 	{
 	case TITLE:
-		scene_ptr = new TitleScene(this);
+		scene_ptr = new Title(this);
 
 
 
 		break;
 	case INGAME:
-		scene_ptr = new InGameScene(this);
+		scene_ptr = new InGame(this);
 
 		//	初期化処理
 		scene_ptr->Init();
 		break;
 
 	case RESULT:
-		scene_ptr = new ResultScene(this);
+		scene_ptr = new Result(this);
 		break;
 	default:
 		break;
@@ -44,7 +44,7 @@ void Game::GameLoop()
 	//
 	//	初期化処理
 	//
-	current_scene_ptr->Init();
+	scene_ptr->Init();
 
 
 	// ループ開始

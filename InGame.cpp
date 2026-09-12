@@ -28,7 +28,7 @@ void InGame::Update()
 void InGame::Draw()
 {
 
-
+	DrawString(20, 20, "InGame", GetColor(0, 0, 0));
 
 }
 
