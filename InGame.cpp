@@ -20,6 +20,10 @@ void InGame::Input()
 void InGame::Update()
 {
 
+	//	マウス座標の取得
+	this->Mouse.GetMouse();
+
+	
 
 
 }
@@ -29,6 +33,8 @@ void InGame::Draw()
 {
 
 	DrawString(20, 20, "InGame", GetColor(0, 0, 0));
+
+	
 
 }
 
