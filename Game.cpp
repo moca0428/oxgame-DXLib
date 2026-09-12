@@ -4,6 +4,34 @@
 void Game::ChangeScene(Scenenum scene_arg)
 {
 
+	//	現在のシーンを破棄する
+	if (scene_ptr != nullptr) {
+		delete scene_ptr;
+		scene_ptr = nullptr;
+	}
+	//	シーン切り替え
+	switch (scene_arg)
+	{
+	case TITLE:
+		scene_ptr = new Title(this);
+
+
+
+		break;
+	case INGAME:
+		scene_ptr = new InGame(this);
+
+		//	初期化処理
+		scene_ptr->Init();
+		break;
+
+	case RESULT:
+		scene_ptr = new Result(this);
+		break;
+	default:
+		break;
+	}
+
 }
 
 
@@ -16,7 +44,7 @@ void Game::GameLoop()
 	//
 	//	初期化処理
 	//
-	current_scene_ptr->Init();
+	scene_ptr->Init();
 
 
 	// ループ開始
@@ -35,25 +63,25 @@ void Game::GameLoop()
 		//
 		//	入力処理
 		//
-		current_scene_ptr->Input();
+		scene_ptr->Input();
 
 
 		//
 		//	更新処理
 		//
 
-		current_scene_ptr->Update();
+		scene_ptr->Update();
 
 		//
 		//	描画処理
 		//
 
-		current_scene_ptr->Draw();
+		scene_ptr->Draw();
 
 		//
 		//	音声再生処理
 		//
-		current_scene_ptr->Soundplay();
+		scene_ptr->Soundplay();
 
 
 
