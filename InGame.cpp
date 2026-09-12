@@ -3,7 +3,8 @@
 //	初期化処理
 void InGame::Init()
 {
-
+	//	ピースの初期化処理
+	this->piece.Init();
 
 
 }
@@ -26,7 +27,15 @@ void InGame::Update()
 	//	マウスの左クリックがおされていたら
 	if(this->Mouse.GetMouseLeft())
 	{
-		
+		//	マウスの座標がピースの座標範囲内にあればの処理をやってほしいです
+		if()
+		{
+			//	ピースの座標をマウスの座標に合わせる
+			this->piece.MoveToMouse(this->Mouse.mouse_pos);
+		}
+
+		//		マウスの座標をピースに渡す
+		this->piece.MoveToMouse(this->Mouse.mouse_pos);
 	}
 
 
@@ -42,7 +51,8 @@ void InGame::Draw()
 	//	ボードの描画
 	this->board.Render();
 
-
+	//	ピースの描画
+	this->piece.Draw(0);	//	〇の描画
 
 
 	//	マウスの描画

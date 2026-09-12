@@ -22,8 +22,8 @@ void Piece::Init()
 // ƒ}ƒEƒX‚É‡‚í‚¹‚ÄˆÚ“®‚·‚éˆ—
 void Piece::MoveToMouse(FloatXY mouse)
 {
-	this->pos.x = mouse.x;
-	this->pos.y = mouse.y;
+	this->pos.x = mouse.x -90;
+	this->pos.y = mouse.y - 90;
 }
 
 // ‹î‚Ì•`‰æ
