@@ -54,7 +54,7 @@ void Game::GameLoop()
 		clock_t check_fps = clock() + CLOCKS_PER_SEC / 60;
 
 		// マウスカーソル表示設定
-		SetMouseDispFlag(TRUE);
+		SetMouseDispFlag(FALSE);
 
 		// 画面上の描画を初期化（画面を消去）
 		ClearDrawScreen();

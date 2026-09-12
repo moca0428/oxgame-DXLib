@@ -38,6 +38,8 @@ void InGame::Draw()
 
 	DrawString(20, 20, "InGame", GetColor(0, 0, 0));
 
+	//	ƒ}ƒEƒX‚Ì•`‰æ
+	this->Mouse.DrawMouse();
 	
 
 }

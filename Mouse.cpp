@@ -27,3 +27,20 @@ int Mouse::mouse_y()
  {
 	 return (GetMouseInput() & MOUSE_INPUT_LEFT) != 0;
  }
+
+ void Mouse::DrawMouse()
+ {
+	 //	クリックの状況でマウスの描画を帰る
+	 if(this->GetMouseLeft())
+	 {
+		 draw_x = 100;
+		 draw_y = 27;
+	 }
+	 else
+	 {
+		 draw_x = 30;
+		 draw_y = 27;
+	 }
+
+	 DrawRectGraph(mouse_pos.x -35, mouse_pos.y -35,draw_x, draw_y, CURSOL_SIZE, CURSOL_SIZE,cursol, TRUE);
+ }
