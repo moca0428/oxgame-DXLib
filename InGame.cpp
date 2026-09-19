@@ -5,7 +5,7 @@ void InGame::Init()
 {
 	for(int p = 0; p < 2; p++)
 	{
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < PIECE_NUM; i++)
 		{
 			//	ピースの初期化処理(丸)
 			this->piece[p][i].Init();
@@ -58,7 +58,7 @@ void InGame::Update()
 	//	マウスの左クリックがおされていたら
 	if(this->mouse.GetMouseLeft())
 	{
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < PIECE_NUM; i++)
 		{
 			//	Oの処理
 
@@ -119,7 +119,7 @@ void InGame::Update()
 		//	駒の位置をもとに戻す
 		for (int p = 0; p < 2; p++)
 		{
-			for (int i = 0; i < 20; i++)
+			for (int i = 0; i < PIECE_NUM; i++)
 			{
 				//　丸かバツかを渡す
 				this->piece[p][i].Position(p);
@@ -151,7 +151,7 @@ void InGame::Draw()
 
 	for (int p = 0; p < 2; p++)
 	{
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < PIECE_NUM; i++)
 		{
 			//	駒が見えているならば
 			if (this->piece[p][i].visible)

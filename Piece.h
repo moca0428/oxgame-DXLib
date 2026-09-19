@@ -11,6 +11,9 @@ public:
 	Piece();
 
 
+	//	‹î‚Ì”
+	#define PIECE_NUM 20
+
 	//	‹î‚Ì’è‹`‚Ì’è”i‚Ü‚é‚©‚Î‚Â‚©j
 	#define O_PIACE 0
 	#define X_PIACE 1
