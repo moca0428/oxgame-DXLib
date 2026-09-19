@@ -25,6 +25,14 @@ void Title::Update()
 	//	マウス座標の取得
 	this->mouse.GetMouse();
 
+	//	マウスの左クリックがおされていたら
+	if (this->mouse.GetMouseLeft())
+	{
+		//		ゲームシーンに切り替える
+		this->oya_ptr->ChangeScene(Game::INGAME);
+
+	}
+
 
 
 }

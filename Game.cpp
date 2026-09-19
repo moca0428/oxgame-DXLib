@@ -38,7 +38,7 @@ void Game::ChangeScene(Scenenum scene_arg)
 void Game::GameLoop()
 {
 
-	this->ChangeScene(INGAME);
+	this->ChangeScene(TITLE);
 
 
 	//
