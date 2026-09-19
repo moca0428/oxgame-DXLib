@@ -34,10 +34,28 @@ public:
 	//	スタートボタンの画像ハンドル
 	int start_hnd = -1;
 
+	//	ボタン影の画像ハンドル
+	int shadow_hnd = -1;
+
+	//	クリックエフェクトの画像ハンドル
+	int click_hnd = -1;
+
+
+
+	//	マウスが押されたかのフラグ
+	bool mouse_flag = false;
+
+	//	マウスを押してる秒数
+	int mouse_frame = 0;
+
 
 	//	時間を数える
 	int frame_count = -1;
 
+
+	//	ボタンの座標
+	int button_x = 660;
+	int button_y = 840;
 
 
 
