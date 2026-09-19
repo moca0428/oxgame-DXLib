@@ -31,6 +31,13 @@ public:
 	//	背景画像ハンドル
 	int bg_hnd = -1;
 
+	//	スタートボタンの画像ハンドル
+	int start_hnd = -1;
+
+
+	//	時間を数える
+	int frame_count = -1;
+
 
 
 
