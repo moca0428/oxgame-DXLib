@@ -4,11 +4,13 @@
 
 class Result : public Scene
 {
+	//画像バンドル→(ChatGPT Image 2026年9月19日 12_18_48.png)
 	/// <summary>
 	/// インスタンスはここで宣言しメンバ変数にする
 	/// </summary>
 
 
+	//
 public:
 
 	/// <summary>
@@ -28,8 +30,13 @@ public:
 	}
 
 
-
-
+	
+	//	背景画像ハンドル(リザルトバンドル)
+	int result_hnd = -1;
+	//	リトライ用のボタン画像ハンドル
+	int retry_hnd = -1;
+	//	タイトルに戻る用のボタン画像ハンドル
+	int return_hnd = -1;
 
 	//	オーバーライドで定義
 
