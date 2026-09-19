@@ -19,6 +19,12 @@ public:
 	float Line_x;		//	X座標
 	float Line_y;		//	Y座標
 
+	int cell_x; //	選んだマスの列を判定
+	int cell_y; //	選んだマスの行を判定
+
+	int cell_num;	//　番号
+
+
 
 	//	盤面画像のハンドル
 	int board_hnd = LoadGraph("data/board.png");
