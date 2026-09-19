@@ -20,7 +20,7 @@ void Title::Input()
 void Title::Update()
 {
 	//	マウス座標の取得
-	this->Mouse.GetMouse();
+	this->mouse.GetMouse();
 
 
 

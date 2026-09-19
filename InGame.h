@@ -37,7 +37,11 @@ public:
 	Board board;
 
 	//	駒のインスタンス
-	Piece piece;
+	//	０，丸、１、バツ	
+	Piece piece[1][20];
+
+
+
 
 
 	//	オーバーライドで定義

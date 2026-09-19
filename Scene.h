@@ -20,7 +20,7 @@ protected:
 	/// </summary>
 
 	//	É}ÉEÉX
-	Mouse Mouse;
+	Mouse mouse;
 
 
 

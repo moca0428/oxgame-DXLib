@@ -3,8 +3,11 @@
 //	初期化処理
 void InGame::Init()
 {
-	//	ピースの初期化処理
-	this->piece.Init();
+	for(int i = 0; i < 20; i++)
+	{
+		//	ピースの初期化処理(丸)
+		this->piece[O_PIACE][i].Init();
+	}
 
 
 }
@@ -22,20 +25,27 @@ void InGame::Update()
 {
 
 	//	マウス座標の取得
-	this->Mouse.GetMouse();
+	this->mouse.GetMouse();
 
 	//	マウスの左クリックがおされていたら
-	if(this->Mouse.GetMouseLeft())
+	if(this->mouse.GetMouseLeft())
 	{
-		//	マウスの座標がピースの座標範囲内にあればの処理をやってほしいです
-		if()
+		for (int i = 0; i < 20; i++)
 		{
-			//	ピースの座標をマウスの座標に合わせる
-			this->piece.MoveToMouse(this->Mouse.mouse_pos);
-		}
+			//	当たり判定X
+			if (this->mouse.mouse_pos.x >= this->piece[O_PIACE][i].pos.x && this->mouse.mouse_pos.x <= this->piece[O_PIACE][i].pos.x + 200)
+			{ //　当たり判定Y
+				if (this->mouse.mouse_pos.y >= this->piece[O_PIACE][i].pos.y && this->mouse.mouse_pos.y <= this->piece[O_PIACE][i].pos.y + 200)
+				{
+					//	ピースの座標をマウスの座標に合わせる
+					this->piece[O_PIACE][i].MoveToMouse(this->mouse.mouse_pos);
+					//		マウスの座標をピースに渡す
+					this->piece[O_PIACE][i].MoveToMouse(this->mouse.mouse_pos);
+				}
+			}
 
-		//		マウスの座標をピースに渡す
-		this->piece.MoveToMouse(this->Mouse.mouse_pos);
+			
+		}
 	}
 
 
@@ -51,12 +61,15 @@ void InGame::Draw()
 	//	ボードの描画
 	this->board.Render();
 
-	//	ピースの描画
-	this->piece.Draw(0);	//	〇の描画
+	for (int i = 0; i < 20; i++)
+	{
+		//	ピースの描画
+		this->piece[O_PIACE][i].Draw(O_PIACE);	//	〇の描画
+	}
 
 
 	//	マウスの描画
-	this->Mouse.DrawMouse();
+	this->mouse.DrawMouse();
 
 	
 
