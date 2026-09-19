@@ -1,5 +1,8 @@
 #include "Mouse.h"
 
+// グローバルインスタンスの定義（1回だけ）
+Mouse mouse;
+
 int Mouse::mouse_x()
 {
 	int mouse_x;
