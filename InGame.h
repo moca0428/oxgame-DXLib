@@ -32,6 +32,9 @@ public:
 
 	}
 
+	//	ルール画像用ハンドル
+	int rule_hnd = -1;
+
 
 	//	ボードのインスタンス
 	Board board;

@@ -4,6 +4,9 @@
 void Title::Init() 
 {
 
+	//	”wŒi‰æ‘œ‚Ì“Ç‚İ‚İ
+	bg_hnd = LoadGraph("data/title.png");
+
 
 
 }
@@ -29,7 +32,8 @@ void Title::Update()
 //	•`‰æˆ—
 void Title::Draw()
 {
-
+	//	”wŒi‰æ‘œ‚Ì•`‰æ
+	DrawGraph(0, 0, bg_hnd, TRUE);
 
 
 }

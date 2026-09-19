@@ -27,6 +27,8 @@ public:
 
 	}
 
+	//	”wŒi‰æ‘œƒnƒ“ƒhƒ‹
+	int bg_hnd = -1;
 
 
 

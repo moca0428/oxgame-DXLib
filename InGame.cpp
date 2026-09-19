@@ -3,6 +3,9 @@
 //	‰Šú‰»ˆ—
 void InGame::Init()
 {
+	//	ƒ‹[ƒ‹‰æ‘œ‚Ì“Ç‚İ‚İ
+	rule_hnd = LoadGraph("data/rule_1.png");
+
 	for(int p = 0; p < 2; p++)
 	{
 		for (int i = 0; i < PIECE_NUM; i++)
@@ -135,7 +138,8 @@ void InGame::Update()
 void InGame::Draw()
 {
 
-	DrawString(20, 20, "InGame", GetColor(0, 0, 0));
+	//	ƒ‹[ƒ‹‰æ‘œ‚Ì•`‰æ
+	DrawGraph( 1360,200, rule_hnd, FALSE);
 
 	//	‚PP‚ÌèD’u‚«ê
 	DrawFillBox(20, 150, 530, 400, GetColor(255, 200, 200));
