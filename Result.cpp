@@ -5,15 +5,18 @@
 //	初期化処理
 void Result::Init()
 {
-
-
+	result_hnd = LoadGraph("data/result.png");
+	
+	//	まだ画像が用意できていないので、コメント化
+	//return_hnd = ;
+	//retry_hnd=;
 
 }
 
 //	入力処理
 void Result::Input()
 {
-
+	//	マウスの左クリックがおされていたら
 
 
 }
@@ -21,7 +24,11 @@ void Result::Input()
 //	更新処理
 void Result::Update()
 {
+	//	ほとんどタイトルと同じ処理になると思う
 
+	//	マウス座標の取得
+	
+	//	
 
 
 }
