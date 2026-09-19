@@ -42,6 +42,8 @@ public:
 	//　駒の初期化処理
 	void Init();
 
+	//	駒の座標設定
+	void SetPos(FloatXY pos);
 
 	//	マウスに合わせて移動
 	void MoveToMouse(FloatXY mouse);

@@ -18,6 +18,13 @@ void Piece::Init()
 }
 
 
+//	駒の座標設定
+void Piece::SetPos(FloatXY pos)
+{
+	this->pos.x = pos.x;
+	this->pos.y = pos.y;
+}
+
 
 // マウスに合わせて移動する処理
 void Piece::MoveToMouse(FloatXY mouse)

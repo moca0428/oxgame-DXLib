@@ -38,7 +38,7 @@ public:
 
 	//	駒のインスタンス
 	//	０，丸、１、バツ	
-	Piece piece[1][20];
+	Piece piece[2][20];
 
 
 
