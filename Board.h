@@ -6,6 +6,10 @@
 class Board{
 
 public:
+
+	//	コンストラクタ
+	Board() {};
+
 	//	変数の宣言
 
 	//	線のXY座標を入れる変数
@@ -13,6 +17,14 @@ public:
 	float Line_x;		//	X座標
 	float Line_y;		//	Y座標
 
+	//マス目を判定するための変数
+	int cell_x;	//	選んだマスの列を判定
+	int cell_y; //	選んだマスの行を判定
+
+	int cell_num;	//　番号
+
+	//	盤面画像のハンドル(800*800)
+	int board_hnd = LoadGraph("data/board.png");
 
 
 	//	関数の宣言

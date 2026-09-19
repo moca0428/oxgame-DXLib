@@ -1,5 +1,8 @@
 #include "Mouse.h"
 
+// グローバルで共有する Mouse インスタンスの宣言
+Mouse mouse;
+
 int Mouse::mouse_x()
 {
 	int mouse_x;

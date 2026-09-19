@@ -26,3 +26,6 @@ public:
 
 
 };
+
+// グローバルで共有する Mouse インスタンスの宣言
+extern Mouse mouse;

@@ -1,7 +1,7 @@
 //　ボード.cpp（処理の部分を書く）
 #include"Board.h";
 
-//	プル＋リクエストをしろ。
+#include"Mouse.h"
 
 
 //----------------------------------
@@ -11,6 +11,13 @@ void Board::Init() {
 
 	Line_x=160;
 	Line_y = 160;
+
+	//	1マス(200*200)	
+	cell_x = mouse.mouse_pos.x/ 200;
+	cell_y = mouse.mouse_pos.y / 200;
+
+	cell_num = (cell_y - 1) * 4 + cell_x;
+
 
 }
 //----------------------------------
