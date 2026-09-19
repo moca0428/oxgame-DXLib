@@ -24,7 +24,11 @@ public:
 		S = 2  // ぱー
 	};
 
+	//	駒が見えるかどうか
+		bool visible = false;
 
+	//	駒が使用可能かどうか
+		bool usable = false;
 
 	//	画像用のグラフィックハンドル（〇）
 	int ohnd = -1;

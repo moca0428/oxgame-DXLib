@@ -32,17 +32,29 @@ void InGame::Update()
 	{
 		for (int i = 0; i < 20; i++)
 		{
-			//	当たり判定X
-			if (this->mouse.mouse_pos.x >= this->piece[O_PIACE][i].pos.x && this->mouse.mouse_pos.x <= this->piece[O_PIACE][i].pos.x + 200)
-			{ //　当たり判定Y
-				if (this->mouse.mouse_pos.y >= this->piece[O_PIACE][i].pos.y && this->mouse.mouse_pos.y <= this->piece[O_PIACE][i].pos.y + 200)
+			//	そのピースが使用可能状態ならば
+			if(this->piece[O_PIACE][i].usable)
+			{
+				//	そのピースが見えている状態ならば
+				if(this->piece[O_PIACE][i].visible)
 				{
-					//	ピースの座標をマウスの座標に合わせる
-					this->piece[O_PIACE][i].MoveToMouse(this->mouse.mouse_pos);
-					//		マウスの座標をピースに渡す
-					this->piece[O_PIACE][i].MoveToMouse(this->mouse.mouse_pos);
+
+					//	当たり判定X
+					if (this->mouse.mouse_pos.x >= this->piece[O_PIACE][i].pos.x && this->mouse.mouse_pos.x <= this->piece[O_PIACE][i].pos.x + 200)
+					{ //　当たり判定Y
+						if (this->mouse.mouse_pos.y >= this->piece[O_PIACE][i].pos.y && this->mouse.mouse_pos.y <= this->piece[O_PIACE][i].pos.y + 200)
+						{
+							//	ピースの座標をマウスの座標に合わせる
+							this->piece[O_PIACE][i].MoveToMouse(this->mouse.mouse_pos);
+							//		マウスの座標をピースに渡す
+							this->piece[O_PIACE][i].MoveToMouse(this->mouse.mouse_pos);
+						}
+					}
+
 				}
 			}
+
+			
 
 			
 		}
@@ -57,14 +69,26 @@ void InGame::Draw()
 
 	DrawString(20, 20, "InGame", GetColor(0, 0, 0));
 
+	//	１Pの手札置き場
+	DrawFillBox(20, 150, 530, 400, GetColor(255, 150, 150));
+
+	//	２Pの手札置き場
+	DrawFillBox(20, 700, 530, 950, GetColor(150, 150, 255));
+
+
 
 	//	ボードの描画
 	this->board.Render();
 
 	for (int i = 0; i < 20; i++)
 	{
-		//	ピースの描画
-		this->piece[O_PIACE][i].Draw(O_PIACE);	//	〇の描画
+		//	駒が見えているならば
+		if(this->piece[O_PIACE][i].visible)
+		{
+			//	ピースの描画
+			this->piece[O_PIACE][i].Draw(O_PIACE);	//	〇の描画
+		}
+
 	}
 
 
