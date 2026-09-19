@@ -25,6 +25,28 @@ void Piece::SetPos(FloatXY pos)
 	this->pos.y = pos.y;
 }
 
+//	駒の更新処理
+void Piece::Position(int hnd)
+{
+	//	駒の座標を盤面の座標に吸着させる処理
+
+
+
+	//	駒の座標を元の位置に戻す処理
+	//	番手の場所にもどす
+	this->pos.x = 50 + (this->order - 1) * 150;
+	if(hnd == 0)
+	{
+		this->pos.y = 200;
+	}
+	else if(hnd == 1)
+	{
+		this->pos.y = 750;
+	}
+
+
+}
+
 
 // マウスに合わせて移動する処理
 void Piece::MoveToMouse(FloatXY mouse)

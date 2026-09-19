@@ -16,6 +16,9 @@ void InGame::Init()
 				this->piece[p][i].visible = true;
 				this->piece[p][i].usable = true;
 
+				//	番手を作ります
+				this->piece[p][i].order = i + 1;
+
 				//	見えてるので座標を設定する
 				if(p == O_PIACE)
 				{
@@ -50,6 +53,7 @@ void InGame::Update()
 
 	//	マウス座標の取得
 	this->mouse.GetMouse();
+
 
 	//	マウスの左クリックがおされていたら
 	if(this->mouse.GetMouseLeft())
@@ -110,6 +114,19 @@ void InGame::Update()
 			
 		}
 	}
+	else
+	{
+		//	駒の位置をもとに戻す
+		for (int p = 0; p < 2; p++)
+		{
+			for (int i = 0; i < 20; i++)
+			{
+				//　丸かバツかを渡す
+				this->piece[p][i].Position(p);
+			}
+		}
+
+	}
 
 
 }
@@ -130,6 +147,7 @@ void InGame::Draw()
 
 	//	ボードの描画
 	this->board.Render();
+
 
 	for (int p = 0; p < 2; p++)
 	{

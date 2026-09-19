@@ -15,6 +15,12 @@ public:
 	#define O_PIACE 0
 	#define X_PIACE 1
 
+	//	持ち駒の定位置
+	#define FIRST 200 //	1枚目
+	#define	SECOND 350 //	2枚目
+	#define THIRD 500 //	3枚目
+
+
 
 	//	駒の定数の定義（ぐー、ちょき、ぱー）
 	enum rps
@@ -30,6 +36,11 @@ public:
 	//	駒が使用可能かどうか
 		bool usable = false;
 
+	//	今この駒が何番手か
+	//	0=なし、1=1番手、2=2番手、3=3番手
+		int order = 0;
+
+
 	//	画像用のグラフィックハンドル（〇）
 	int ohnd = -1;
 	//	画像用のグラフィックハンドル（×）
@@ -44,6 +55,9 @@ public:
 
 	//	駒の座標設定
 	void SetPos(FloatXY pos);
+
+	//	駒の更新処理
+	void Position(int hnd);
 
 	//	マウスに合わせて移動
 	void MoveToMouse(FloatXY mouse);
